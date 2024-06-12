@@ -21,9 +21,12 @@ public class BoardController {
         return book;
     }
 
+
     @GetMapping("/like/{id}")
     public Book like(@PathVariable Long id) {
-        boardService.likeCountUpOrDown(id);
+        Book book = boardService.likeCountUpOrDown(id);
+
+        return book;
     }
 
 
